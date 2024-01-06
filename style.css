@@ -206,7 +206,7 @@ main h1 {
     background-color: var(--clr-white);
     min-height: 100px;
     border-radius: 7px;
-    padding: 30px 20px;
+    padding: 10px 40px;
 }
 
 .p-card {
@@ -214,6 +214,7 @@ main h1 {
     display: grid;
     gap: 30px;
     grid-template: 1fr auto / 1fr;
+    padding: 30px 20px;
 }
 
 .p-card h2 {
@@ -244,4 +245,21 @@ main h1 {
 .trending {
     display: grid;
     grid-template-rows: auto 1fr;
+}
+
+.announcement {
+    padding: 20px 0;
+}
+
+.announcement h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.announcement p {
+    color: var(--clr-dgray);
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid var(--clr-gray);
 }
