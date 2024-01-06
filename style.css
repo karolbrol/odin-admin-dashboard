@@ -1,0 +1,27 @@
+* , *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template: auto 1fr / 1fr 4fr;
+    grid-template-areas: "sidebar header" "sidebar main";
+    background-color: rgb(175, 175, 175);
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: blue;
+    grid-area: sidebar;
+}
+
+header {
+    background-color: white;
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
