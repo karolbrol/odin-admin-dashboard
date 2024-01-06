@@ -179,4 +179,29 @@ header {
 main {
     grid-area: main;
     box-shadow:inset 0px 15px 10px -10px var(--clr-shadow);
+    display: grid;
+    grid-template: auto auto / 2fr 1fr;
+    padding: 15px;
+    gap: 15px;
+}
+
+main h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.projects {
+    grid-row: 1 / -1;
+}
+
+.card-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: var(--clr-white);
+    min-height: 100px;
+    border-radius: 10px;
 }
