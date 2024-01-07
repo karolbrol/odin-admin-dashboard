@@ -5,12 +5,14 @@
 }
 
 :root {
-    --clr-white: rgb(247, 246, 242);
-    --clr-gray: rgb(210, 216, 221);
-    --clr-dgray: rgb(91, 95, 97);
-    --clr-accent1: rgb(60, 136, 250);
-    --clr-accent2: rgb(255, 205, 40);
-    --clr-shadow: rgba(90, 90, 90, 0.349);
+    --clr-white: #feffff;
+    --clr-gray: #def2F1;
+    --clr-dgray: #233941;
+    --clr-dark: #051216;
+    --clr-accent1: #3aafa9;
+    --clr-daccent1: #195463;
+    --clr-accent2: #fbbf24;
+    --clr-shadow: rgba(18, 48, 168, 0.294);
 }
 
 body {
@@ -18,12 +20,13 @@ body {
     grid-template: auto 1fr / 1fr 4fr;
     grid-template-areas: "sidebar header" "sidebar main";
     background-color: var(--clr-gray);
+    color: var(--clr-dark);
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .sidebar {
-    background-color: var(--clr-accent1);
+    background-image: linear-gradient(to bottom left, var(--clr-accent1), var(--clr-daccent1));
     color: var(--clr-white);
     grid-area: sidebar;
     display: flex;
@@ -42,9 +45,9 @@ body {
 }
 
 .logo-img {
-    width: 1.7rem;
-    height: 1.7rem;
-    background-color: var(--clr-white);
+    width: 2.5rem;
+    filter: invert(100%) sepia(47%) saturate(1022%) hue-rotate(172deg)
+        brightness(106%) contrast(105%);
     justify-self: center;
 }
 
@@ -73,10 +76,10 @@ body {
 }
 
 .icon {
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--clr-white);
+    width: 1.8rem;
     justify-self: center;
+    filter: invert(100%) sepia(47%) saturate(1022%) hue-rotate(172deg)
+        brightness(106%) contrast(105%);
 }
 
 
@@ -105,7 +108,10 @@ header {
 }
 
 .search::before {
-    content: "Search-img";
+    content: url("./img/magnify.svg");
+    width: 1.8rem;
+    filter: invert(19%) sepia(48%) saturate(333%) hue-rotate(149deg)
+        brightness(93%) contrast(96%);
 }
 
 .profile-controls {
@@ -117,10 +123,9 @@ header {
 }
 
 .notification-icon {
-    background-color: var(--clr-dgray);
     width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    filter: invert(19%) sepia(48%) saturate(333%) hue-rotate(149deg)
+        brightness(93%) contrast(96%);
 }
 
 .avatar-small {
@@ -208,6 +213,7 @@ main h1 {
     min-height: 100px;
     border-radius: 7px;
     padding: 10px 40px;
+    box-shadow: 3px 5px 7px 0 var(--clr-shadow);
 }
 
 .p-card {
@@ -230,16 +236,27 @@ main h1 {
 .p-card-actions {
     display: grid;
     grid-auto-flow: column;
-    gap: 15px;
+    gap: 20px;
     justify-content: end;
 }
 .add2favorites-icon,
 .add2observed-icon,
-.share-icon {
-    width: 25px;
-    height: 25px;
-    background-color: var(--clr-dgray);
-    border-radius: 50%;
+.git-icon {
+    width: 1.7rem;
+    filter: invert(19%) sepia(48%) saturate(333%) hue-rotate(149deg)
+        brightness(93%) contrast(96%);
+}
+
+.add2favorites-icon {
+    content: url("./img/star-plus.svg");
+}
+
+.add2observed-icon {
+    content: url("./img/eye-plus.svg");
+}
+
+.git-icon {
+    content: url("./img/github.svg");
 }
 
 .announcements,
